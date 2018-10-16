@@ -1,7 +1,7 @@
-mod stats {
+pub mod stats {
     use std::collections::HashMap;
 
-    fn mean(list: &Vec<i32>) -> f32 {
+    pub fn mean(list: &Vec<i32>) -> f32 {
         let len: f32 = list.len() as f32;
 
         let mut accum: f32 = 0.0;
@@ -13,7 +13,7 @@ mod stats {
         return accum / len;
     }
 
-    fn median(list: &Vec<i32>) -> i32 {
+    pub fn median(list: &Vec<i32>) -> i32 {
         let mut list = list.clone();
         list.sort();
         let len = list.len();
@@ -25,9 +25,9 @@ mod stats {
         return list[len / 2];
     }
 
-    fn mode(list: &Vec<i32>) -> i32 {
+    pub fn mode(list: &Vec<i32>) -> i32 {
         let mut counts: HashMap<i32, i32> = HashMap::new();
-        let mut max_key = std::i32::MIN;
+        let mut max_key = <i32>::min_value();
         let mut max_val = 0;
 
         for &num in list {
@@ -42,5 +42,12 @@ mod stats {
 
         return max_key;
     }
+}
 
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        assert_eq!(2 + 2, 4);
+    }
 }

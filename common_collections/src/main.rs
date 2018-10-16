@@ -1,3 +1,7 @@
+extern crate common_collections;
+
+use common_collections::stats;
+
 fn main() {
     let one = vec![1, 2, 3, 4];
     let two = Vec::new();

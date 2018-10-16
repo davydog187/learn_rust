@@ -1,5 +1,5 @@
 [package]
-name = "collections"
+name = "common_collections"
 version = "0.1.0"
 authors = ["Dave Lucia <davelucianyc@gmail.com>"]
 
