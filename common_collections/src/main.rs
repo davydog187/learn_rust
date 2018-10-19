@@ -17,6 +17,9 @@ fn main() {
     }
 
     let words = [
+        String::from(""),
+        String::from("a"),
+        String::from("t"),
         String::from("buttz"),
         String::from("apple"),
         String::from("fooseball"),
