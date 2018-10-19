@@ -1,5 +1,6 @@
 extern crate common_collections;
 
+use common_collections::pig_latin;
 use common_collections::stats;
 
 fn main() {
@@ -15,5 +16,13 @@ fn main() {
         println!("\tmode: {}", stats::mode(&list));
     }
 
-    println!("Hello, world!");
+    let words = [
+        String::from("buttz"),
+        String::from("apple"),
+        String::from("fooseball"),
+    ];
+
+    for word in words.iter() {
+        println!("pig latin for {} is {}", word, pig_latin::translate(&word));
+    }
 }
