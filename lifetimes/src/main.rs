@@ -10,11 +10,9 @@ fn main() {
     let a = String::from("thing");
     let result;
 
-    {
-        let b = String::from("weird thing");
+    let b = String::from("weird thing");
 
-        result = longest(a.as_str(), b.as_str());
+    result = longest(a.as_str(), b.as_str());
 
-    }
     println!("Longest is '{}'", result);
 }
